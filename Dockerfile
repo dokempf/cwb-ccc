@@ -3,7 +3,7 @@ FROM jupyter/base-notebook:584f43f06586
 
 # Downgrade Python to 3.6 - the outdated cwb-python dependency needs it.
 # The install all the system dependencies using conda for consistency.
-RUN conda install python=3.6 && \
+RUN conda install -c conda-forge python=3.6 && \
     conda install -c conda-forge \
         bison \
         bottleneck \
